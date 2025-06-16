@@ -104,11 +104,7 @@ MCP (non-adk): [![GitHub Folder](https://img.shields.io/badge/View%20on-GitHub-b
 
 Ollama jailbreak: [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hamzafarooq/multi-agent-course/blob/main/Module_6/Ollama/Mistral%20Llama%203.1%20and%20Llama%203.2%20jailbreak.ipynb)
 
-NemoGuardrails: [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hamzafarooq/multi-agent-course/blob/main/Module_6/Guardrails/Llama%20Guard.ipynb)
-
 Llama Guard: [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hamzafarooq/multi-agent-course/blob/main/Module_6/Guardrails/Llama%20Guard.ipynb)
-
-DSPy (bonus): [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hamzafarooq/multi-agent-course/blob/main/Module_6/DSPy/DSPy%20Introduction.ipynb)
 
 ---
 
