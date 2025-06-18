@@ -1,0 +1,42 @@
+===========================
+MCP_ADK_A2A Setup Instructions
+===========================
+
+Step 1: Environment Setup
+-------------------------
+Create and activate a conda environment with Python 3.10 or higher:
+
+conda create -n mcp_env python=3.10
+conda activate mcp_env
+
+Install dependencies:
+pip install -r requirements.txt
+
+Step 2: Configuration
+---------------------
+Update the `.env` file and `clients/query_MCP_ADK_A2A.py` with the following values:
+
+GOOGLE_GENAI_USE_VERTEXAI=TRUE  
+GOOGLE_CLOUD_PROJECT=your_project_id  
+GOOGLE_CLOUD_LOCATION=your_project_location  
+
+Step 3: API Key Setup
+---------------------
+Create a secret in Google Cloud Secret Manager named `GOOGLE_API_KEY` and add your API key as its value.
+
+Then authenticate your environment:
+
+gcloud auth application-default login
+
+Step 4: Run the Web App
+-----------------------
+Run the ADK web interface:
+python -m adk web
+
+-----------------------
+Example queries:
+1. List the top 5 dates with the highest total weekly sales across all stores.
+2. What is the average weekly sales for department 1 in store 1?
+
+
+Base code Reference: https://github.com/RubensZimbres/A2A_ADK_MCP
