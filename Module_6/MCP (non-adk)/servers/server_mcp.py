@@ -5,10 +5,6 @@ from loguru import logger
 from typing import Any, Dict, List
 import pandas as pd
 import os
-from dotenv import load_dotenv
-
-# Load environment variables if needed
-load_dotenv()
 
 mcp = FastMCP("security-hub")
 
@@ -43,7 +39,7 @@ def setup_database(authenticator: DatabaseAuthenticator) -> sqlite3.Connection:
         raise ValueError("Invalid credentials!")
 
     # Load dataset and create database
-    df = pd.read_csv(r"/<Your-Path>/walmart_sales.csv")
+    df = pd.read_csv(r"/content/multi-agent-course/Module_6/MCP (non-adk)/data/walmart_sales.csv")
     connection = sqlite3.connect("walmart_sales.db")
     df.to_sql(name="walmart_sales", con=connection, if_exists='replace', index=False)
 
@@ -127,3 +123,4 @@ if __name__ == "__main__":
     # Start the server (this will block until the server is stopped)
     print("Starting MCP server...")
     mcp.run(transport="stdio")
+
