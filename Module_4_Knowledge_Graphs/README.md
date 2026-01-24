@@ -4,13 +4,9 @@ A comprehensive system for comparing **Retrieval-Augmented Generation (RAG)** an
 
 Built with **Neo4j Aura** and **OpenAI GPT-4o-mini**, this framework provides objective, LLM-based evaluation to determine which approach works best for different types of questions.
 
-✨ **NEW:** Interactive query-specific graph visualizations show the exact data path used for each answer!
+**NEW:** Interactive query-specific graph visualizations show the exact data path used for each answer!
 
-[View Examples](#-code-examples) • [Join Course](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
-
----
-
-## 🎯 What This Does
+## What This Does
 
 Three distinct query methods:
 
@@ -29,15 +25,15 @@ Three distinct query methods:
 - Scores each method on accuracy, completeness, precision
 - Produces detailed reasoning and recommendations
 
-## ✨ Key Features
+## Key Features
 
-- ✅ **No Hardcoded Queries** — Cypher is generated dynamically from natural language
-- ✅ **Objective Evaluation** — Unbiased LLM-based scoring system
-- ✅ **Interactive Visualizations** — Dual graph views (full graph + query-specific)
-- ✅ **Production Ready** — Graceful error handling, retry logic, logging
-- ✅ **Batch Evaluation** — Evaluate many questions together
+- No Hardcoded Queries — Cypher is generated dynamically from natural language
+- Objective Evaluation — Unbiased LLM-based scoring system
+- Interactive Visualizations — Dual graph views (full graph + query-specific)
+- Production Ready — Graceful error handling, retry logic, logging
+- Batch Evaluation — Evaluate many questions together
 
-## 📊 When to Use Which Method
+## When to Use Which Method
 
 **Knowledge Graph Excels At:**
 - "Who are the collaborators of Emily Chen?"
@@ -49,7 +45,7 @@ Three distinct query methods:
 - "Explain innovations in transformer architectures."
 - "Summarize ethical concerns in AI research."
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -98,11 +94,11 @@ streamlit run app.py
 ```
 
 **Streamlit Features:**
-- 🎯 Beautiful minimal UI with side-by-side comparison
-- 📊 Interactive Pyvis visualizations (drag, zoom, click)
-- 📈 Radar charts and detailed metrics
-- 🔍 Query-specific graph visualization (shows exact data path)
-- 💾 Pre-loaded sample questions
+- Beautiful minimal UI with side-by-side comparison
+- Interactive Pyvis visualizations (drag, zoom, click)
+- Radar charts and detailed metrics
+- Query-specific graph visualization (shows exact data path)
+- Pre-loaded sample questions
 
 **Alternative: Python script**
 ```bash
@@ -114,7 +110,7 @@ python knowledge_graph_rag_comparison.py
 jupyter notebook knowledge_graph_neo4j_with_evals.ipynb
 ```
 
-## 💻 Code Examples
+## Code Examples
 
 ### Single Question with Judge
 
@@ -150,19 +146,19 @@ result = rag.compare_with_judge("Your question here")
 rag.close()
 ```
 
-## 🔍 Interactive Graph Visualization
+## Interactive Graph Visualization
 
-The Streamlit app includes **two types** of visualizations:
+The Streamlit app includes two types of visualizations:
 
 ### 1. Full Graph Exploration
 - Browse entire knowledge graph structure
-- Color-coded nodes: 🔵 Researchers, 🟢 Articles, 🔴 Topics
+- Color-coded nodes: Blue (Researchers), Green (Articles), Red (Topics)
 - Interactive: drag, zoom, click for details
 - Customizable: 20-50 nodes
 
-### 2. Query-Specific Visualization ⭐ (Fixed!)
+### 2. Query-Specific Visualization (Fixed!)
 
-**Shows the exact subgraph used to answer your question**
+Shows the exact subgraph used to answer your question.
 
 After each Knowledge Graph answer, see:
 - Relevant entities extracted from query results
@@ -170,10 +166,10 @@ After each Knowledge Graph answer, see:
 - Complete graph traversal path
 
 **Example:** "Who are Emily Chen's collaborators?" displays:
-- 🔵 Emily Chen node (center)
-- 🔵 Collaborator nodes
-- 🟢 Shared articles connecting them
-- ➡️ PUBLISHED relationships
+- Emily Chen node (center)
+- Collaborator nodes
+- Shared articles connecting them
+- PUBLISHED relationships
 
 **How it works:**
 1. Question → Cypher query
@@ -184,11 +180,21 @@ After each Knowledge Graph answer, see:
 
 **Recent Fix:** Improved extraction algorithm to handle edge cases and empty collections, ensuring visualizations display reliably.
 
-## 📁 Project Structure
+---
+
+### 🎓 Want to Learn More?
+
+Master advanced multi-agent systems, RAG, and Knowledge Graphs with our comprehensive bootcamp.
+
+[**Agent Engineering Bootcamp - Save $200 with code 200OFF →**](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+
+---
+
+## Project Structure
 
 ```
 Module_4_Knowledge_Graphs/
-├── setup.py                                # First-time setup ⭐
+├── setup.py                                # First-time setup
 ├── app.py                                  # Streamlit web interface
 ├── streamlit_helper.py                     # Helper functions
 ├── knowledge_graph_rag_comparison.py       # Core implementation
@@ -198,7 +204,7 @@ Module_4_Knowledge_Graphs/
 └── README.md                               # This file
 ```
 
-## 📈 Data Schema
+## Data Schema
 
 **Nodes:**
 - `Researcher` (name) — Research authors
@@ -209,15 +215,15 @@ Module_4_Knowledge_Graphs/
 - `(Researcher)-[:PUBLISHED]->(Article)` — Authorship
 - `(Article)-[:IN_TOPIC]->(Topic)` — Categorization
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Visualization Not Showing
 
 **Cause:** Query returns aggregations (counts) without actual nodes.
 
 **Solution:** Ask about specific entities:
-- ✅ "Who are Emily Chen's collaborators?"
-- ❌ "How many collaborators does everyone have?"
+- Good: "Who are Emily Chen's collaborators?"
+- Poor: "How many collaborators does everyone have?"
 
 Check terminal for: `Debug: Graph extraction failed: [details]`
 
@@ -241,7 +247,7 @@ python setup.py  # Load dataset first
 python setup.py  # Creates embeddings automatically
 ```
 
-## 💡 Tips
+## Tips
 
 **Writing effective questions:**
 - For KG: Use specific names, ask "How many...", "Who are...", "Which..."
@@ -259,7 +265,7 @@ rag.load_data('https://your-domain.com/data.csv')
 # Ensure CSV has: Title, Abstract, Authors, Topics, Publication_Date
 ```
 
-## ❓ FAQ
+## FAQ
 
 **Q: Can I use my own data?**
 A: Yes! Use `rag.load_data('your-data.csv')` with appropriate columns.
@@ -279,9 +285,9 @@ A: Yes! Change URI in `.env` to `bolt://localhost:7687`.
 **Q: Why use both RAG and KG?**
 A: They excel at different tasks. This framework shows when to use which approach.
 
-## 🎯 Why This Matters
+## Why This Matters
 
-Most implementations choose *either* RAG or Knowledge Graphs. This framework shows **when to use which**, backed by objective LLM evaluations.
+Most implementations choose either RAG or Knowledge Graphs. This framework shows **when to use which**, backed by objective LLM evaluations.
 
 Ideal for:
 - Building hybrid QA systems
@@ -290,19 +296,17 @@ Ideal for:
 - Demonstrating KG value vs pure LLM approaches
 - Benchmarking different retrieval strategies
 
-## 📚 Learn More
+## Learn More
 
 Want to master building advanced multi-agent systems?
 
-<div align="center">
-
 [![Agent Engineering Bootcamp](course_img.png)](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
-### 🎓 Agent Engineering Bootcamp: Developers Edition
+### Agent Engineering Bootcamp: Developers Edition
 
-⭐⭐⭐⭐⭐ **4.8** (96 reviews)
+**Rating:** ⭐⭐⭐⭐⭐ 4.8 (96 reviews)
 
-**Hamza Farooq** - Founder | Ex-Google | Prof UCLA & UMN
+**Instructor:** Hamza Farooq - Founder | Ex-Google | Prof UCLA & UMN
 
 Master production-ready multi-agent systems, RAG, Knowledge Graphs, and advanced LLM architectures.
 
@@ -312,11 +316,9 @@ Master production-ready multi-agent systems, RAG, Knowledge Graphs, and advanced
 - Production-ready AI architecture patterns
 - Evaluation frameworks and best practices
 
-### [**🚀 Enroll Now - Save $200 with code 200OFF →**](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
+[**Enroll Now - Save $200 with code 200OFF**](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
-</div>
-
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Ways to help:
 - Add support for other graph databases (ArangoDB, TigerGraph)
@@ -327,29 +329,23 @@ Contributions welcome! Ways to help:
 
 [GitHub Repository](https://github.com/hamzafarooq/multi-agent-course)
 
-## 📝 License
+## License
 
 Apache 2.0 — free to use in your projects!
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built with [Neo4j](https://neo4j.com/), [OpenAI](https://openai.com/), [Streamlit](https://streamlit.io/), [Pyvis](https://pyvis.readthedocs.io/), and [Plotly](https://plotly.com/).
 
 Dataset adapted from [generative-ai-101](https://github.com/dcarpintero/generative-ai-101).
 
-## 📞 Support
+## Support
 
 - **Issues:** [GitHub Issues](https://github.com/hamzafarooq/multi-agent-course/issues)
 - **Course:** [Agent Engineering Bootcamp](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 ---
 
-<div align="center">
-
-**Happy Evaluating! 🚀**
+**Happy Evaluating!** 🚀
 
 *Building the future of AI, one agent at a time.*
-
-[⭐ Star us on GitHub](https://github.com/hamzafarooq/multi-agent-course) • [📚 Join the Course](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
-
-</div>
