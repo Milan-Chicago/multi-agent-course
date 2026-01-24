@@ -1,0 +1,12 @@
+# Core dependencies
+neo4j==5.14.1
+openai==1.40.0
+python-dotenv==1.0.0
+
+# Streamlit app dependencies
+streamlit==1.31.0
+plotly==5.18.0
+
+# Optional: for Jupyter notebook
+jupyter==1.0.0
+ipython==8.20.0

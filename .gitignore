@@ -1,3 +1,53 @@
 Module_2/.DS_Store
 Module_1/.DS_Store
 .DS_Store
+.claude
+Module_4_Knowledge_Graphs/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Environment files
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
