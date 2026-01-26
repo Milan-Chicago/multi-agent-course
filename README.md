@@ -143,22 +143,22 @@ Llama Guard: [![Open in Colab](https://colab.research.google.com/assets/colab-ba
 
 This course uses the following tools and services:
 
-| Area                  | Tools / Frameworks                                  |
+| Area                  | Tools / Frameworks                                   |
 |-----------------------|------------------------------------------------------|
-| **LLM Access**        | Ares API (via Traversaal.ai), OpenAI GPT-4o-mini    |
-| **Agent Frameworks**  | LangGraph, AutoGen, SmolAgents                       |
-| **Vector Search**     | FAISS (Colab), OpenSearch (optional)                |
-| **Graph Databases**   | Neo4j Aura, NetworkX, LangGraph                      |
+| **LLM Access**        | Ares API (via Traversaal.ai), OpenAI GPT-4o-mini     |
+| **Agent Frameworks**  | ADK, A2A, CrewAI                                     |
+| **Vector Search**     | FAISS (Colab), OpenSearch (optional)                 |
+| **Graph Databases**   | Neo4j Aura, NetworkX                                 |
 | **Memory & Caching**  | Redis Cloud (recommended setup)                      |
 | **Web Interfaces**    | Streamlit, FastAPI                                   |
 | **Visualizations**    | Pyvis, Plotly, Interactive Graph Rendering           |
 | **Notebooks**         | Google Colab Pro (preferred), Jupyter (optional)     |
-| **Deployments (Optional)** | AWS Lambda, Step Functions, FastAPI            |
+| **Deployments (Optional)** | AWS Lambda, Step Functions, FastAPI             |
 | **Language**          | Python 3.10+                                         |
 
 > You don't need to pre-install anything locally.
 > All key dependencies are included in each notebook.
-
+g
 ---
 
 ## What You'll Build
@@ -168,7 +168,7 @@ This course goes beyond theory. You'll build production-ready systems including:
 - **Agentic RAG Systems** with advanced retrieval and semantic caching
 - **Knowledge Graph Applications** with RAG vs KG evaluation framework
 - **Interactive Dashboards** using Streamlit for real-time demos
-- **Multi-Agent Workflows** with LangGraph and AutoGen
+- **Multi-Agent Workflows** with ADK and A2A and CrewAI
 - **LLM-based Evaluators** for objective system comparison
 - **Production Guardrails** for responsible AI deployment
 
