@@ -2,7 +2,7 @@
 
 Welcome to the official course repository for **Agent Engineering Bootcamp: Developers Edition**.
 
-This repo is for **enrolled students only** and contains all code, exercises, templates, and project materials used throughout the course.
+This repo is for **anyone** and contains all code, exercises, templates, and project materials used throughout the course.
 
 **What makes this different?**
 Move beyond theory and build production-ready AI systems. From Agentic RAG and Knowledge Graphs to Multi-Agent Workflows and LLM Guardrails — learn to architect, evaluate, and deploy AI applications that work in the real world.
@@ -10,6 +10,8 @@ Move beyond theory and build production-ready AI systems. From Agentic RAG and K
 🔗 [Visit course page](https://maven.com/boring-bot/advanced-llm) • 💾 [Save $200 with code 200OFF](https://maven.com/boring-bot/advanced-llm?promoCode=200OFF)
 
 ---
+<img width="2752" height="1536" alt="unnamed-3" src="https://github.com/user-attachments/assets/a206c511-5e8b-42ce-abc2-f8e36f87861d" />
+
 
 ## Quick Links
 
