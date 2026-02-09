@@ -1,4 +1,4 @@
-# Maven Quantization
+# Quantization
 
 A collection of Jupyter notebooks demonstrating **4-bit model quantization** using [bitsandbytes](https://github.com/TimDettmers/bitsandbytes) and [Hugging Face Transformers](https://github.com/huggingface/transformers). These notebooks show how to reduce the memory footprint of large language models while maintaining output quality, and how to measure inference performance.
 
